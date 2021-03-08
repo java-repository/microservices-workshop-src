@@ -1,0 +1,10 @@
+micronaut:
+  application:
+    name: demo
+owners:
+  fred:
+    name: Fred
+    age: 35
+  barney:
+    name: Barney
+    age: 30
