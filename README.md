@@ -34,7 +34,7 @@ For more information on other available scopes see the [Scopes](https://docs.mic
 
 Try creating a bean in a file called `src/main/java/example/micronaut/OwnerService.java`:
 
-    <copy>
+<copy>
     package example.micronaut;
 
     import javax.inject.Singleton;
@@ -43,7 +43,7 @@ Try creating a bean in a file called `src/main/java/example/micronaut/OwnerServi
     public class OwnerService {
 
     }
-    </copy>
+</copy>
 
 The `OwnerService` class is annotated with `@Singleton` which means it is now managed by Micronaut and available as a bean to be injected into other objects.
 
