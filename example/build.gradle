@@ -35,6 +35,7 @@ dependencies {
     implementation("io.micronaut.data:micronaut-data-hibernate-jpa")
     annotationProcessor("io.micronaut.openapi:micronaut-openapi")
     implementation("io.swagger.core.v3:swagger-annotations")
+    annotationProcessor("io.micronaut:micronaut-graal")
 }
 
 application {
@@ -49,4 +50,14 @@ java {
 tasks {
 
 }
+nativeImage {
+    args("--enable-all-security-services")
+}
 
+dockerBuild {
+    images = ["phx.ocir.io/cloudnative-devrel/micronaut-labs/${System.env.DOCKER_USER}/$project.name:$project.version"]
+}
+
+dockerBuildNative {
+    images = ["phx.ocir.io/cloudnative-devrel/micronaut-labs/${System.env.DOCKER_USER}/$project.name:$project.version"]
+}
