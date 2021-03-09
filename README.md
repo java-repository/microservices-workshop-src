@@ -1,4 +1,4 @@
-# Writing Web Controllers with Micronaut
+## Writing Web Controllers with Micronaut
 
 In this lab you will learn how to write a REST API that produces JSON output.
 
