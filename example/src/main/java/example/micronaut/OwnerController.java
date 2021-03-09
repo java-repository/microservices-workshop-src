@@ -7,6 +7,7 @@ import io.micronaut.http.annotation.Post;
 import javax.validation.Valid;
 import java.util.Collection;
 import edu.umd.cs.findbugs.annotations.Nullable;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
 
 @Controller("/owners")
 public class OwnerController {
@@ -35,7 +36,14 @@ public class OwnerController {
         }
     }
 
+    /**
+     * Gets a Pet for the given Owner name and Pet name
+     * @param owner The name of the Owner
+     * @param pet The name of Pet
+     * @return A pet if it exists
+     */
     @Get("/{owner}/pets/{pet}")
+    @ApiResponse(responseCode = "404", description = "If a pet is not found")
     Pet getPet(String owner, String pet) {
         return ownerOperations.getPet(owner, pet);
     }

@@ -7,6 +7,11 @@ micronaut:
       n-threads: 75
   server:
     thread-selection: IO
+  router:
+    static-resources:
+      swagger:
+        paths: classpath:META-INF/swagger
+        mapping: /swagger/**
 datasources:
   default:
     url: "jdbc:oracle:thin:@${DB_NAME}"

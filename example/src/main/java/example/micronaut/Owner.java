@@ -7,6 +7,9 @@ import javax.persistence.Id;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 
+/**
+ * Represents an Owner of the pets application.
+ */
 @Entity
 public class Owner {
 
@@ -36,10 +39,16 @@ public class Owner {
         this.age = age;
     }
 
+    /**
+     * The name of the owner
+     */
     public String getName() {
         return name;
     }
 
+    /**
+     * The age of the owner
+     */
     public int getAge() {
         return age;
     }
@@ -51,4 +60,7 @@ public class Owner {
     public void setId(Long id) {
         this.id = id;
     }
+
+
+
 }
