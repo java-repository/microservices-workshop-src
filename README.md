@@ -1,4 +1,4 @@
-# Setting up your Database Schema with Database Migration & Using Micronaut Data JPA to Simplifiy Data Repositories
+## Setting up your Database Schema with Database Migration & Using Micronaut Data JPA to Simplifiy Data Repositories
 
 In this lab you will learn how your Micronaut application can manage the evolution of your database schema with Flyway and define Data access repository interfaces that simplify your database access code using JPA.
 
